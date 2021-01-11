@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+}
+
+#nav {
+  z-index: 1;
+  position: fixed;
+  width: 100vw;
+  height: 15vh;
+  background-position: 3vw 3vh;
+  background-image: url("./images/logo.png");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-color: white;
+  -webkit-animation: nav_fade_in 1s linear infinite;
+          animation: nav_fade_in 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#nav ul {
+  position: fixed;
+  padding-top: 4.5vh;
+  padding-left: 26vw;
+}
+
+#nav ul li {
+  font-size: 1.2rem;
+  float: left;
+  margin-right: 10vw;
+  list-style: none;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: black;
+  -webkit-animation: nav_words_fade_in 1s linear infinite;
+          animation: nav_words_fade_in 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#nav ul li a:hover {
+  color: #c9c9c9;
+  cursor: pointer;
+}
+
+#nav p {
+  background-color: rgba(52, 0, 87, 0.5);
+  position: fixed;
+  padding: 1.1rem 1rem 1rem 1rem;
+  margin-top: 4.5vh;
+  margin-left: 88vw;
+  border-radius: 10px;
+  -webkit-animation: contact_word_fade_in 1s linear infinite;
+          animation: contact_word_fade_in 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#nav p a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#nav p:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
+
+#home_pic {
+  z-index: 0;
+  position: relative;
+  width: 100vw;
+  height: 65vh;
+  top: 13vw;
+  margin-bottom: 4vw;
+  background-position: center;
+  background-image: url("./images/landscape.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-animation: pic_fade_out 1s linear infinite;
+          animation: pic_fade_out 1s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--scroll) * -1s);
+          animation-delay: calc(var(--scroll) * -1s);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+#intro {
+  width: 100vw;
+  height: 100vh;
+}
+
+@-webkit-keyframes pic_fade_out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes pic_fade_out {
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes nav_fade_in {
+  to {
+    background-color: rgba(66, 0, 128, 0.76);
+    background-image: url("./images/logo2.png");
+  }
+}
+
+@keyframes nav_fade_in {
+  to {
+    background-color: rgba(66, 0, 128, 0.76);
+    background-image: url("./images/logo2.png");
+  }
+}
+
+@-webkit-keyframes nav_words_fade_in {
+  to {
+    color: white;
+  }
+}
+
+@keyframes nav_words_fade_in {
+  to {
+    color: white;
+  }
+}
+
+@-webkit-keyframes contact_word_fade_in {
+  to {
+    background-color: rgba(147, 116, 219, 0.692);
+  }
+}
+
+@keyframes contact_word_fade_in {
+  to {
+    background-color: rgba(147, 116, 219, 0.692);
+  }
+}
+/*# sourceMappingURL=index.css.map */

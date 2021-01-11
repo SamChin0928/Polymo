@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#nav {
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    height: 15vh;
+    background-position: 3vw 3vh;
+    background-image: url("./images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: white;
+    animation: nav_fade_in 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    ul {
+        position: fixed;
+        padding-top: 4.5vh;
+        padding-left: 26vw;
+        li {
+            font-size: 1.2rem;
+            float: left;
+            margin-right: 10vw;
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: black;
+                animation: nav_words_fade_in 1s linear infinite;
+                animation-play-state: paused;
+                animation-delay: calc(var(--scroll) * -1s);
+                animation-iteration-count: 1;
+                animation-fill-mode: both;
+                &:hover {
+                    color: rgb(201, 201, 201);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    p {
+        background-color: rgba(52, 0, 87, 0.5);
+        position: fixed;
+        padding: 1.1rem 1rem 1rem 1rem;
+        margin-top: 4.5vh;
+        margin-left: 88vw;
+        border-radius: 10px;
+        animation: contact_word_fade_in 1s linear infinite;
+        animation-play-state: paused;
+        animation-delay: calc(var(--scroll) * -1s);
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+        &:hover {
+            transform: scale(1.05, 1.05);
+            cursor: pointer;
+        }
+    }
+}
+
+#home_pic {
+    z-index: 0;
+    position: relative;
+    width: 100vw;
+    height: 65vh;
+    top: 13vw;
+    margin-bottom: 4vw;
+    background-position: center;
+    background-image: url("./images/landscape.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: pic_fade_out 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+#intro {
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes pic_fade_out {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes nav_fade_in {
+    to {
+        background-color: rgba(66, 0, 128, 0.76);
+        background-image: url("./images/logo2.png");
+    }
+}
+
+@keyframes nav_words_fade_in {
+    to {
+        color: white;
+    }
+}
+
+@keyframes contact_word_fade_in {
+    to {
+        background-color: rgba(147, 116, 219, 0.692);
+    }
+}
